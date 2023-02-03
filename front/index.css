@@ -1,0 +1,110 @@
+body{
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+.ratingForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  background-color: #f1f1f1;
+}
+
+.rating {
+  width: 200px;
+  height: 40px;
+  display: flex;
+  margin: 8%;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.rating:not(:checked)>input {
+  display: none;
+}
+
+.rating:not(:checked)>label {
+  width: 40px;
+  cursor: pointer;
+  font-size: 40px;
+  color: lightgrey;
+  text-align: center;
+  line-height: 1;
+}
+
+.rating:not(:checked)>label:before {
+  content: '★';
+}
+
+.rating>input:checked~label {
+  color: gold;
+}
+
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label {
+  color: gold;
+}
+
+.rating>input:checked+label:hover,
+.rating>input:checked+label:hover~label,
+.rating>input:checked~label:hover,
+.rating>input:checked~label:hover~label,
+.rating>label:hover~input:checked~label {
+  color: gold;
+}
+
+
+.input{
+  display: none;
+  margin: 5%;
+  width: 200px;
+  height: 20px;  
+}
+
+.button{
+  display: none;
+  width: 80px;
+  height: 30px;
+  margin-top: 5%;
+  margin-bottom: 18%;
+  border:none;
+  color: #ffffff;
+  background-color: #ff4a4a;
+  -webkit-border-radius: 30px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: black;
+}
+
+.rate{
+  display: none;
+  margin: auto;
+  margin-bottom: 10%;
+}
+
+.comment{
+  display: none;
+  margin-bottom: 12%;
+  margin-left: 10%;
+  margin-right: 10%;
+  line-break: anywhere;
+}
+
+.inputed{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.disabled{
+  pointer-events: none;
+}
+
